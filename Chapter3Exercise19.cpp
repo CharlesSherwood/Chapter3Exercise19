@@ -52,7 +52,7 @@ int main()
 
     //Display all the information onto the screen .
     cout << fixed << setprecision(2) << "Loan Amount:\t\t$" << loan << endl;
-    cout << fixed<<setprecision(0)<<"Monthly Interest Rate:\t" << MIR <<"%" << endl;
+    cout <<"Monthly Interest Rate:\t" << MIR <<"%" << endl;
     cout << "Number of payments:\t" << payment << endl;
     cout << fixed << setprecision(2) << "Monthly Payment:\t$" << MonthPay << endl;
     cout << fixed << setprecision(2) << "Amount Paid Back:\t$" << APB << endl;
