@@ -11,6 +11,8 @@ paid back on a loan taken out.
 #include<iomanip>
 using namespace std;
 
+
+//Make Variable Modules
 double LoanA()
 {
     double loan;
@@ -37,17 +39,24 @@ double PaymentsA()
 
 
 
-
+//Return them to main module, and calculate the users input.
 int main()
 {
     double loan = LoanA();
     double Month = Monthly();
     double payment = PaymentsA();
     double MonthPay = Month * pow((1 + Month), payment) / (pow(1 + Month, payment) - 1) * loan;
+    double MIR = Month * 100;
+    double APB = MonthPay * payment;
+    double IP = APB - loan;
 
-    cout << fixed << setprecision(2) << MonthPay;
-    
-
+    //Display all the information onto the screen .
+    cout << fixed << setprecision(2) << "Loan Amount:\t\t$" << loan << endl;
+    cout << fixed<<setprecision(0)<<"Monthly Interest Rate:\t" << MIR <<"%" << endl;
+    cout << "Number of payments:\t" << payment << endl;
+    cout << fixed << setprecision(2) << "Monthly Payment:\t$" << MonthPay << endl;
+    cout << fixed << setprecision(2) << "Amount Paid Back:\t$" << APB << endl;
+    cout << fixed << setprecision(2) << "Interest Paid:\t\t$" << IP << endl;
 
 
     
